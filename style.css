@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-background-image: url('slider_bg.jpg');
+background-image: url('assets/slider_bg.jpg');
 padding-top: 20px;
 }
 #root{
