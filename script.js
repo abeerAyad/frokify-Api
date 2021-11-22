@@ -1,19 +1,19 @@
-
 let roots =document.querySelector("#root")
-
 let container=document.createElement("div")
 container.setAttribute('class','container')
 let heading=document.createElement('h1')
 heading.setAttribute('id','heading')
 heading.textContent='Recipes'
 document.body.prepend(heading)
-let select=document.getElementById('#select')
-let divSelect=document.createElement('div')
-divSelect.appendChild(select)
+let divSelect=document.getElementsByClassName('selects')
+let select=document.querySelector('#select')
+let options=document.getElementsByTagName('option')
+let input=document.querySelector('.text')
 
 function run(){
 document.querySelector('.text').value=document.querySelector('#select').value
-
+roots.innerHTML=" "
+container.innerHTML=' '
 fetch(`https://forkify-api.herokuapp.com/api/search?q=${ document.querySelector('#select').value}`)
 .then((res)=>res.json())
 .then(data =>{
@@ -66,6 +66,7 @@ roots.appendChild(heading1)
       let stepIngredients=resp.ingredients
       stepIngredients.forEach(ele=>{
         let list =document.createElement('li');
+        list.className='list'
             list.textContent=ele
             unorderLists.appendChild(list)
        })
@@ -88,8 +89,5 @@ Card.appendChild(details)
 })
 
 .catch((err)=>console.log(err))
-
 }
-  
-  
-   
+select.onchange = run;
