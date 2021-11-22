@@ -1,152 +1,174 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
 }
 body{
 background-image: url('assets/slider_bg.jpg');
 padding-top: 20px;
 }
 #root{
-  margin: 80px 0;
+margin: 80px 0;
 }
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
 }
 
 .Card {
-  margin-top: 40px ;
-  background: white;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  transition: all 0.5s ease;
-  width:280px;
-  position: relative;
-  height: 400px;
-  text-align: center;
+margin-top: 40px ;
+background: white;
+box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+border-radius: 12px;
+transition: all 0.5s ease;
+width:400px;
+position: relative;
+height: 390px;
+text-align: center;
+overflow: hidden;
 }
 h1{
-    font-size: 80px;
-    font-family: 'Dancing Script', 'cursive';
-    text-align: center;
-    color: #2b2b2b;
+  font-size: 80px;
+  font-family: 'Dancing Script', 'cursive';
+  text-align: center;
+  color: #2b2b2b;
 }
 h2{
-  color: #2b2b2b;
-  text-align: center;
-  font-size: 20px;
-  font-family: 'Gochi Hand', cursive;
-  padding: 10px 20px 0;
+color: #2b2b2b;
+text-align: center;
+font-size: 20px;
+font-family: 'Gochi Hand', cursive;
+padding: 10px 20px 0;
 }
 h2#heading1{
-  font-family: 'Pacifico', cursive;
-  font-size: 50px;
+font-family: 'Pacifico', cursive;
+font-size: 50px;
 }
 .Card:hover h2{
-  color: #ca0808;
-  transition: all 0.5s;
+color: #ca0808;
+transition: all 0.5s;
 }
 p{
-  font-family: 'Patrick Hand', cursive;
-  text-align: center;
-  color: #fac122;
-  margin: 15px 40px 30px 40px;
-  padding: 5px 0;
-  background-color: green;
-  border-radius: 10px;
+font-family: 'Patrick Hand', cursive;
+text-align: center;
+color: #fac122;
+margin: 15px 40px 30px 40px;
+padding: 5px 0;
+background-color: green;
+border-radius: 10px;
 }
 .Card:hover p{
-  background-color: #fac122;
-  color:green;
-  transition: all 0.5s;
+background-color: #fac122;
+color:green;
+transition: all 0.5s;
 }
 a.detailsBtn{
-  text-align: center;
-  background-color: blueviolet;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 10px 20px;
- margin-top: 30px;
+text-align: center;
+background-color: blueviolet;
+text-decoration: none;
+border-radius: 10px;
+padding: 10px 20px;
+margin-top: 30px;
 }
 #image{
-  width: 280px;
-  height: 158px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+width: 400px;
+height: 190px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 }
 .sourses{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 158px;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+overflow: hidden;
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items: center;
+opacity: 0;
+background-color: rgba(0, 0, 0, 0.5);
+height: 158px;
 }
 
 .link{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #ca0808;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background-color: #ca0808;
 }
 .Card:hover .sourses{
-  opacity: 1;
- transition: all .3s ease;
- border-radius: 10px;
+opacity: 1;
+transition: all .3s ease;
+border-radius: 10px;
 }
 
 .detailsBtn:focus,.detailsBtn:active{
-  background-color: burlywood;
-  color: black;
+background-color: burlywood;
+color: black;
 }
 .unorderList{
-  background-color: #fac122;
-  padding: 10px 30px;
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
- 
-  z-index: 1;
-  transition: top ease 0.5s;
-  border-radius: 10px;
-  text-align: left !important;
+background-color: #fac122;
+padding: 10px 30px;
+opacity: 0;
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 1;
+transition: top ease 0.5s;
+border-radius: 10px;
+text-align: left !important;
+font-family: 'Patrick Hand', cursive;
+
+}
+.list{
+padding-bottom: 4px;
+font-size: 15px;
 }
 .Card:hover .unorderList{
-  opacity: 1;
-  top: 0;
+opacity: 1;
+top: 0;
+min-height: 400px;
+overflow-y: auto;
 }
-
 .selects{
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+display: flex;
+justify-content: center;
+margin-top: 20px;
 }
 #select{
-  width: 20%;
-  text-align: center;
-  outline: none;
-  border: none;
-  font-family: 'Patrick Hand', cursive;
+width: 20%;
+text-align: center;
+outline: none;
+border: none;
+font-family: 'Patrick Hand', cursive;
 }
 .text{
-  width: 20%;
-  padding: 10px;
-  outline: none;
-  
-   font-family: 'Patrick Hand', cursive;
-   margin-left: 20px;
-   border: none;
+width: 20%;
+padding: 10px;
+outline: none;
+
+ font-family: 'Patrick Hand', cursive;
+ margin-left: 20px;
+ border: none;
 }
