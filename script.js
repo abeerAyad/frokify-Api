@@ -46,7 +46,7 @@ roots.appendChild(heading1)
        sourse.href=recipes.source_url
        let iconImg=document.createElement('img')
        iconImg.className='link'
-       iconImg.src = 'link_icon.png';
+       iconImg.src = 'assets/link_icon.png';
        sourse.appendChild(iconImg)
        hoverIcon.appendChild(sourse)
        Card.appendChild(hoverIcon)
